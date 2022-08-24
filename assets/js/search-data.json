@@ -49,9 +49,13 @@
   
 
   
-      ,"page1": {
+
+  
+
+  
+      ,"page3": {
           "title": "About Me",
-          "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
+          "content": "Hello! My name is Keira Okimoto and I’m a senior going to Del Norte High School. I have two birds, Blue (male) and Mochi (female). I like to spend my time drawing, sleeping, eating, or playing games. That’s…. Pretty much it. .",
           "url": "https://keiraokimoto.github.io/Fastpages/about/",
           "relUrl": "/about/",
           "date": ""
@@ -62,13 +66,8 @@
   
 
   
-  
 
   
-
-  
-  
-
   
 
   
@@ -81,7 +80,10 @@
   
 
   
-      ,"page10": {
+  
+
+  
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://keiraokimoto.github.io/Fastpages/robots.txt",
