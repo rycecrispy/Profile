@@ -6,7 +6,7 @@ permalink: /notes/
 
 Here is where I will be storing notes for the year. Will they be organized nicely? Only time will tell.
 
-Vocab:
+Compsci Notes:
 - Add prefixes to make an order
 - Dashes -> don't take them out they mess up the syntax and etc
 - Key + value -> gets response
