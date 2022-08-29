@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      1 min read
     
 </span></p>
 
@@ -132,43 +132,41 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>import getpass, sys
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span>
 
-def question_with_response<span class="o">(</span>prompt<span class="o">)</span>:
-    print<span class="o">(</span><span class="s2">&quot;Question: &quot;</span> + prompt<span class="o">)</span>
-    <span class="nv">msg</span> <span class="o">=</span> input<span class="o">()</span>
-    <span class="k">return</span> msg
+<span class="k">def</span> <span class="nf">question_with_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Question: &quot;</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">msg</span>
 
-<span class="nv">questions</span> <span class="o">=</span> <span class="m">3</span>
-<span class="nv">correct</span> <span class="o">=</span> <span class="m">0</span>
+<span class="n">questions</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
 
-print<span class="o">(</span><span class="s1">&#39;Hello, &#39;</span> + getpass.getuser<span class="o">()</span> + <span class="s2">&quot; running &quot;</span> + sys.executable<span class="o">)</span>
-print<span class="o">(</span><span class="s2">&quot;You will be asked &quot;</span> + str<span class="o">(</span>questions<span class="o">)</span> + <span class="s2">&quot; questions.&quot;</span><span class="o">)</span>
-question_and_answer<span class="o">(</span><span class="s2">&quot;Are you ready to take a test?&quot;</span><span class="o">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, &#39;</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; running &quot;</span> <span class="o">+</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You will be asked &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; questions.&quot;</span><span class="p">)</span>
 
-<span class="nv">rsp</span> <span class="o">=</span> question_with_response<span class="o">(</span><span class="s2">&quot;What is the best reason for choosing a stemplot rather than a histogram to display the distribution of a quantitative variable?&quot;</span><span class="o">)</span>
-<span class="k">if</span> <span class="nv">rsp</span> <span class="o">==</span> <span class="s2">&quot;  Stemplots make it easier to determine the shape of a distribution&quot;</span>:
-    print<span class="o">(</span>rsp + <span class="s2">&quot; is correct!&quot;</span><span class="o">)</span>
-    <span class="nv">correct</span> <span class="o">+=</span> <span class="m">1</span>
-<span class="k">else</span>:
-    print<span class="o">(</span>rsp + <span class="s2">&quot; is incorrect!&quot;</span><span class="o">)</span>
+<span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">&quot;What is the best reason for choosing a stemplot rather than a histogram to display the distribution of a quantitative variable?&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">&quot;Stemplots make it easier to determine the shape of a distribution&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is correct!&quot;</span><span class="p">)</span>
+    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is incorrect!&quot;</span><span class="p">)</span>
 
-<span class="nv">rsp</span> <span class="o">=</span> question_with_response<span class="o">(</span><span class="s2">&quot;The scores on a statistics test had a mean of 25 and a standard deviation of 3. If a score of 28 was added to the distribution of scores, what would happen to the mean and standard deviation?</span>
-<span class="s2">&quot;</span><span class="o">)</span>
-<span class="k">if</span> <span class="nv">rsp</span> <span class="o">==</span> <span class="s2">&quot;The mean will increase, and standard deviation will stay the same&quot;</span>:
-    print<span class="o">(</span>rsp + <span class="s2">&quot; is correct!&quot;</span><span class="o">)</span>
-    <span class="nv">correct</span> <span class="o">+=</span> <span class="m">1</span>
-<span class="k">else</span>:
-    print<span class="o">(</span>rsp + <span class="s2">&quot; is incorrect!&quot;</span><span class="o">)</span>
+<span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">&quot;The scores on a statistics test had a mean of 25 and a standard deviation of 3. If a score of 28 was added to the distribution of scores, what would happen to the mean and standard deviation?&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">&quot;The mean will increase, and standard deviation will decrease&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is correct!&quot;</span><span class="p">)</span>
+    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is incorrect!&quot;</span><span class="p">)</span>
 
-<span class="nv">rsp</span> <span class="o">=</span> question_with_response<span class="o">(</span><span class="s2">&quot;There are many houses ranging from </span><span class="nv">$200</span><span class="s2">,000 to </span><span class="nv">$500</span><span class="s2">,000 in price. The few houses on the water, however, are priced up to </span><span class="nv">$15</span><span class="s2"> million. The distribution of house prices will be...?&quot;</span><span class="o">)</span>
-<span class="k">if</span> <span class="nv">rsp</span> <span class="o">==</span> <span class="s2">&quot;skewed to the left&quot;</span>:
-    print<span class="o">(</span>rsp + <span class="s2">&quot; is correct!&quot;</span><span class="o">)</span>
-    <span class="nv">correct</span> <span class="o">+=</span> <span class="m">1</span>
-<span class="k">else</span>:
-    print<span class="o">(</span>rsp + <span class="s2">&quot; is incorrect!&quot;</span><span class="o">)</span>
+<span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">&quot;There are many houses ranging from $200,000 to $500,000 in price. The few houses on the water, however, are priced up to $15 million. The distribution of house prices will be...?&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">&quot;Skewed to the right&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is correct!&quot;</span><span class="p">)</span>
+    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is incorrect!&quot;</span><span class="p">)</span>
 
-print<span class="o">(</span>getpass.getuser<span class="o">()</span> + <span class="s2">&quot; you scored &quot;</span> + str<span class="o">(</span>correct<span class="o">)</span> +<span class="s2">&quot;/&quot;</span> + str<span class="o">(</span>questions<span class="o">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; you scored &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -181,29 +179,15 @@ print<span class="o">(</span>getpass.getuser<span class="o">()</span> + <span cl
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Command &#39;import&#39; not found, but can be installed with:
-
-sudo apt install imagemagick-6.q16                  # version 8:6.9.10.23+dfsg-2.1ubuntu11.4, or
-sudo apt install imagemagick-6.q16hdri              # version 8:6.9.10.23+dfsg-2.1ubuntu11.4
-sudo apt install graphicsmagick-imagemagick-compat  # version 1.4+really1.3.35-1
-
-bash: syntax error near unexpected token `(&#39;
-bash: syntax error near unexpected token `&#34;Question: &#34;&#39;
-bash: syntax error near unexpected token `(&#39;
-bash: return: msg: numeric argument required
-bash: return: can only `return&#39; from a function or sourced script
-questions: command not found
-correct: command not found
-bash: syntax error near unexpected token `&#39;Hello, &#39;&#39;
-bash: syntax error near unexpected token `&#34;You will be asked &#34;&#39;
-bash: syntax error near unexpected token `&#34;Are you ready to take a test?&#34;&#39;
-bash: syntax error near unexpected token `(&#39;
-bash: syntax error near unexpected token `rsp&#39;
-correct: command not found
-else:: command not found
-bash: syntax error near unexpected token `rsp&#39;
-bash: syntax error near unexpected token `(&#39;
+<pre>Hello, keira running /home/keira/anaconda3/bin/python
+You will be asked 3 questions.
+Question: What is the best reason for choosing a stemplot rather than a histogram to display the distribution of a quantitative variable?
+Stemplots make it easier to determine the shape of a distribution is correct!
+Question: The scores on a statistics test had a mean of 25 and a standard deviation of 3. If a score of 28 was added to the distribution of scores, what would happen to the mean and standard deviation?
+The mean will increase, and standard deviation will decrease is correct!
+Question: There are many houses ranging from $200,000 to $500,000 in price. The few houses on the water, however, are priced up to $15 million. The distribution of house prices will be...?
+Skewed to the right is correct!
+keira you scored 3/3
 </pre>
 </div>
 </div>
