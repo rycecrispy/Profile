@@ -82,7 +82,7 @@ html_escape:
 
 # Everything below here should be left alone. Modifications may break fastpages
 future: true
-theme: jeykll/midnight
+remote theme: jeykll/midnight
 plugins:
   - jekyll-feed
   - jekyll-gist
