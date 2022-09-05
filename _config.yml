@@ -82,7 +82,7 @@ html_escape:
 
 # Everything below here should be left alone. Modifications may break fastpages
 future: true
-remote theme: jekyll/architect
+remote theme: jekyll/merlot
 plugins:
   - jekyll-feed
   - jekyll-gist
@@ -101,7 +101,7 @@ plugins:
 paginate: 15
 paginate_path: /page:num/
 
-remote theme: jekyll/architect
+remote theme: jekyll/merlot
 
 titles_from_headings:
   enabled:     true
