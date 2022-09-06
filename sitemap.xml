@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://keiraokimoto.github.io/Fastpages/markdown/2020/01/14/test-markdown-post.html</loc>
+<loc>https://keiraokimoto.github.io/Fastpages/example/2020/01/14/test-markdown-post.html</loc>
 <lastmod>2020-01-14T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://keiraokimoto.github.io/Fastpages/jupyter/2020/02/20/test.html</loc>
+<loc>https://keiraokimoto.github.io/Fastpages/example/2020/02/20/test.html</loc>
 <lastmod>2020-02-20T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://keiraokimoto.github.io/Fastpages/jupyter/2022/08/21/Notebook1.html</loc>
+<loc>https://keiraokimoto.github.io/Fastpages/jupyter%20posts/2022/08/21/Notebook1.html</loc>
 <lastmod>2022-08-21T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://keiraokimoto.github.io/Fastpages/markdown/2022/08/21/markdown-1.html</loc>
+<loc>https://keiraokimoto.github.io/Fastpages/markdown%20posts/2022/08/21/markdown-1.html</loc>
 <lastmod>2022-08-21T00:00:00-05:00</lastmod>
 </url>
 <url>
@@ -29,7 +29,7 @@
 <lastmod>2022-08-28T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://keiraokimoto.github.io/Fastpages/markdown/2022/08/28/markdown-2.html</loc>
+<loc>https://keiraokimoto.github.io/Fastpages/markdown%20posts/2022/08/28/markdown-2.html</loc>
 <lastmod>2022-08-28T00:00:00-05:00</lastmod>
 </url>
 <url>
@@ -37,11 +37,11 @@
 <lastmod>2022-09-05T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://keiraokimoto.github.io/Fastpages/markdown/2022/09/05/markdown-3.html</loc>
+<loc>https://keiraokimoto.github.io/Fastpages/markdown%20posts/2022/09/05/markdown-3.html</loc>
 <lastmod>2022-09-05T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://keiraokimoto.github.io/Fastpages/markdown/2022/09/05/markdown-4.html</loc>
+<loc>https://keiraokimoto.github.io/Fastpages/markdown%20posts/2022/09/05/markdown-4.html</loc>
 <lastmod>2022-09-05T00:00:00-05:00</lastmod>
 </url>
 <url>
