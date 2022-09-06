@@ -136,6 +136,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#For-Loop-for-Lists">For Loop for Lists </a></li>
 <li class="toc-entry toc-h2"><a href="#Reverse-Loop-for-Lists">Reverse Loop for Lists </a></li>
 <li class="toc-entry toc-h2"><a href="#Recursive-Loop-for-Lists">Recursive Loop for Lists </a></li>
+<li class="toc-entry toc-h2"><a href="#Dictionary/List-Quiz">Dictionary/List Quiz </a></li>
 <li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
 </ul>
 </li>
@@ -793,6 +794,15 @@ yoo
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dictionary/List-Quiz">
+<a class="anchor" href="#Dictionary/List-Quiz" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dictionary/List Quiz<a class="anchor-link" href="#Dictionary/List-Quiz"> </a>
+</h2>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -812,8 +822,8 @@ yoo
     <span class="s2">"Knights"</span><span class="p">:</span> <span class="s2">"Ritsu Sakuma"</span><span class="p">,</span>
 <span class="p">}</span>
 
-<span class="n">GoodList</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">BadList</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">CorrectList</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">IncorrectList</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="k">def</span> <span class="nf">question_with_response</span><span class="p">(</span><span class="n">unit</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"What is your favorite "</span> <span class="o">+</span> <span class="n">unit</span> <span class="o">+</span> <span class="s2">" character?"</span><span class="p">)</span>
@@ -825,10 +835,10 @@ yoo
         <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="n">unit</span><span class="p">)</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">rsp</span> <span class="o">!=</span> <span class="n">Enstars</span> <span class="p">[</span><span class="n">unit</span><span class="p">]):</span>
             <span class="nb">print</span> <span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is incorrect."</span><span class="p">)</span>
-            <span class="n">BadList</span> <span class="p">[</span><span class="n">unit</span><span class="p">]</span> <span class="o">=</span> <span class="n">rsp</span>
+            <span class="n">IncorrectList</span> <span class="p">[</span><span class="n">unit</span><span class="p">]</span> <span class="o">=</span> <span class="n">rsp</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="nb">print</span> <span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is correct."</span><span class="p">)</span>
-            <span class="n">GoodList</span> <span class="p">[</span><span class="n">unit</span><span class="p">]</span> <span class="o">=</span> <span class="n">rsp</span>
+            <span class="n">CorrectList</span> <span class="p">[</span><span class="n">unit</span><span class="p">]</span> <span class="o">=</span> <span class="n">rsp</span>
         
 <span class="n">question</span><span class="p">()</span>
 </pre></div>
