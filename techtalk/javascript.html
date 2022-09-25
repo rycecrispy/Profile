@@ -67,7 +67,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/Fastpages/search/">Search</a><a class="page-link" href="/Fastpages/categories/">Tags</a><a class="page-link" href="/Fastpages/notes/">Notes</a><a class="page-link" href="/Fastpages/about/">About Me</a></div>
+        <div class="trigger"><a class="page-link" href="/Fastpages/search/">Search</a><a class="page-link" href="/Fastpages/categories/">Tags</a><a class="page-link" href="/Fastpages/notes/">Notes</a><a class="page-link" href="/Fastpages/categories/">Table Link</a><a class="page-link" href="/Fastpages/about/">About Me</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      8 min read
     
 </span></p>
 
@@ -442,8 +442,9 @@ object ; [ 1, 2, 3 ]
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="c1">// define a function to hold data for a Person</span>
-<span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">year</span><span class="p">,</span> <span class="nx">unit</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">year</span><span class="p">,</span> <span class="nx">unit</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">year</span> <span class="o">=</span> <span class="nx">year</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">unit</span> <span class="o">=</span> <span class="nx">unit</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">role</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
@@ -456,13 +457,13 @@ object ; [ 1, 2, 3 ]
 
 <span class="c1">// define a JSON conversion "method" associated with Person</span>
 <span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toJSON</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">year</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">year</span><span class="p">,</span> <span class="nx">unit</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">unit</span><span class="p">,</span> <span class="nx">role</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">role</span><span class="p">};</span>
+    <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="p">,</span> <span class="nx">year</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">year</span><span class="p">,</span> <span class="nx">unit</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">unit</span><span class="p">,</span> <span class="nx">role</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">role</span><span class="p">};</span>
     <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
     <span class="k">return</span> <span class="nx">json</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">// make a new Person and assign to variable leader</span>
-<span class="kd">var</span> <span class="nx">leader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Eichi Tenshouin"</span><span class="p">,</span> <span class="s2">"Graduated"</span><span class="p">,</span> <span class="s2">"fine"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">leader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Eichi Tenshouin"</span><span class="p">,</span> <span class="s2">"19"</span><span class="p">,</span> <span class="s2">"Graduated"</span><span class="p">,</span> <span class="s2">"fine"</span><span class="p">);</span>
 <span class="nx">leader</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"Leader"</span><span class="p">);</span>
 
 <span class="c1">// output of Object and JSON/string associated with Leader</span>
@@ -482,10 +483,11 @@ object ; [ 1, 2, 3 ]
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>object ; Person {
   name: 'Eichi Tenshouin',
+  age: '19',
   year: 'Graduated',
   unit: 'fine',
   role: 'Leader' }
-string ; {"name":"Eichi Tenshouin","year":"Graduated","unit":"fine","role":"Leader"}
+string ; {"name":"Eichi Tenshouin","age":"19","year":"Graduated","unit":"fine","role":"Leader"}
 </pre>
 </div>
 </div>
@@ -521,12 +523,12 @@ string ; {"name":"Eichi Tenshouin","year":"Graduated","unit":"fine","role":"Lead
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="c1">// define a member Array of Person(s)</span>
 <span class="kd">var</span> <span class="nx">members</span> <span class="o">=</span> <span class="p">[</span> 
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Wataru Hibiki"</span><span class="p">,</span> <span class="s2">"Graduated"</span><span class="p">,</span> <span class="s2">"fine"</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Kaoru Hakaze"</span><span class="p">,</span> <span class="s2">"Graduated"</span><span class="p">,</span> <span class="s2">"UNDEAD"</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Midori Takamine"</span><span class="p">,</span> <span class="s2">"Third Year"</span><span class="p">,</span> <span class="s2">"Ryuseitai"</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Niki Shiina"</span><span class="p">,</span> <span class="s2">"Dropped Out"</span><span class="p">,</span> <span class="s2">"Crazy:B"</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Tsukasa Suou"</span><span class="p">,</span> <span class="s2">"Second Year"</span><span class="p">,</span> <span class="s2">"Knights"</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Tsumugi Aoba"</span><span class="p">,</span> <span class="s2">"Graduated"</span><span class="p">,</span> <span class="s2">"Switch"</span><span class="p">)</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Wataru Hibiki"</span><span class="p">,</span> <span class="s2">"19"</span><span class="p">,</span> <span class="s2">"Graduated"</span><span class="p">,</span> <span class="s2">"fine"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Kaoru Hakaze"</span><span class="p">,</span> <span class="s2">"19"</span><span class="p">,</span> <span class="s2">"Graduated"</span><span class="p">,</span> <span class="s2">"UNDEAD"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Midori Takamine"</span><span class="p">,</span> <span class="s2">"17"</span><span class="p">,</span> <span class="s2">"Third Year"</span><span class="p">,</span> <span class="s2">"Ryuseitai"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Niki Shiina"</span><span class="p">,</span> <span class="s2">"19"</span><span class="p">,</span> <span class="s2">"Dropped Out"</span><span class="p">,</span> <span class="s2">"Crazy:B"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Tsukasa Suou"</span><span class="p">,</span> <span class="s2">"17"</span><span class="p">,</span> <span class="s2">"Second Year"</span><span class="p">,</span> <span class="s2">"Knights"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Tsumugi Aoba"</span><span class="p">,</span> <span class="s2">"19"</span><span class="p">,</span> <span class="s2">"Graduated"</span><span class="p">,</span> <span class="s2">"Switch"</span><span class="p">)</span>
 <span class="p">];</span>
 
 <span class="c1">// define a classroom and build Classroom objects and json</span>
@@ -565,42 +567,50 @@ string ; {"name":"Eichi Tenshouin","year":"Graduated","unit":"fine","role":"Lead
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>object ; [ Person {
     name: 'Eichi Tenshouin',
+    age: '19',
     year: 'Graduated',
     unit: 'fine',
     role: 'Leader' },
   Person {
     name: 'Wataru Hibiki',
+    age: '19',
     year: 'Graduated',
     unit: 'fine',
     role: 'Member' },
   Person {
     name: 'Kaoru Hakaze',
+    age: '19',
     year: 'Graduated',
     unit: 'UNDEAD',
     role: 'Member' },
   Person {
     name: 'Midori Takamine',
+    age: '17',
     year: 'Third Year',
     unit: 'Ryuseitai',
     role: 'Member' },
   Person {
     name: 'Niki Shiina',
+    age: '19',
     year: 'Dropped Out',
     unit: 'Crazy:B',
     role: 'Member' },
   Person {
     name: 'Tsukasa Suou',
+    age: '17',
     year: 'Second Year',
     unit: 'Knights',
     role: 'Member' },
   Person {
     name: 'Tsumugi Aoba',
+    age: '19',
     year: 'Graduated',
     unit: 'Switch',
     role: 'Member' } ]
 string ; Eichi Tenshouin
-string ; {"name":"Eichi Tenshouin","year":"Graduated","unit":"fine","role":"Leader"}
+string ; {"name":"Eichi Tenshouin","age":"19","year":"Graduated","unit":"fine","role":"Leader"}
 object ; { name: 'Eichi Tenshouin',
+  age: '19',
   year: 'Graduated',
   unit: 'fine',
   role: 'Leader' }
@@ -656,6 +666,7 @@ object ; { name: 'Eichi Tenshouin',
   <span class="c1">// Heading for Array Columns</span>
   <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;tr&gt;"</span><span class="p">;</span>
   <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Name"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Age"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
   <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Year"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
   <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Unit"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
   <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Role"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
@@ -666,6 +677,7 @@ object ; { name: 'Eichi Tenshouin',
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;tr&gt;"</span><span class="p">;</span>
     <span class="c1">// td for each column of data</span>
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">age</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">year</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">unit</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">role</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
@@ -702,12 +714,14 @@ object ; { name: 'Eichi Tenshouin',
 <div style="display:inline-block;background:black;border: 2px solid grey;box-shadow: 0.8em 0.4em 0.4em grey;"><table>
 <tr>
 <th><mark>Name</mark></th>
+<th><mark>Age</mark></th>
 <th><mark>Year</mark></th>
 <th><mark>Unit</mark></th>
 <th><mark>Role</mark></th>
 </tr>
 <tr>
 <td>Eichi Tenshouin</td>
+<td>19</td>
 <td>Graduated</td>
 <td>fine</td>
 <td>Leader</td>
@@ -715,6 +729,7 @@ object ; { name: 'Eichi Tenshouin',
 <tr></tr>
 <tr>
 <td>Wataru Hibiki</td>
+<td>19</td>
 <td>Graduated</td>
 <td>fine</td>
 <td>Member</td>
@@ -722,6 +737,7 @@ object ; { name: 'Eichi Tenshouin',
 <tr></tr>
 <tr>
 <td>Kaoru Hakaze</td>
+<td>19</td>
 <td>Graduated</td>
 <td>UNDEAD</td>
 <td>Member</td>
@@ -729,6 +745,7 @@ object ; { name: 'Eichi Tenshouin',
 <tr></tr>
 <tr>
 <td>Midori Takamine</td>
+<td>17</td>
 <td>Third Year</td>
 <td>Ryuseitai</td>
 <td>Member</td>
@@ -736,6 +753,7 @@ object ; { name: 'Eichi Tenshouin',
 <tr></tr>
 <tr>
 <td>Niki Shiina</td>
+<td>19</td>
 <td>Dropped Out</td>
 <td>Crazy:B</td>
 <td>Member</td>
@@ -743,6 +761,7 @@ object ; { name: 'Eichi Tenshouin',
 <tr></tr>
 <tr>
 <td>Tsukasa Suou</td>
+<td>17</td>
 <td>Second Year</td>
 <td>Knights</td>
 <td>Member</td>
@@ -750,6 +769,7 @@ object ; { name: 'Eichi Tenshouin',
 <tr></tr>
 <tr>
 <td>Tsumugi Aoba</td>
+<td>19</td>
 <td>Graduated</td>
 <td>Switch</td>
 <td>Member</td>
