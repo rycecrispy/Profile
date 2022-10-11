@@ -456,7 +456,7 @@ window.onload = wrap_img;
                 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Selected:&#39;</span><span class="p">,</span> <span class="n">choice</span> <span class="p">,</span> <span class="s1">&#39;. Price:&#39;</span><span class="p">,</span> <span class="n">menu</span><span class="p">[</span><span class="n">choice</span><span class="p">])</span>
                 <span class="n">total</span> <span class="o">+=</span>  <span class="n">menu</span> <span class="p">[</span><span class="n">choice</span><span class="p">]</span>
             <span class="k">else</span><span class="p">:</span> 
-                <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Incorrect&#39;</span><span class="p">)</span>
+                <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;This item does not exist. Please select another item.&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">total</span>
 
 <span class="n">total</span> <span class="o">=</span> <span class="n">menuloop</span><span class="p">()</span>
@@ -478,9 +478,12 @@ burger  $3.99
 fries  $1.99
 drink  $0.99
 Please select an item from the menu.
-Selected: drink . Price: 0.99
+Selected: burger . Price: 3.99
+This item does not exist. Please select another item.
 Selected: fries . Price: 1.99
-2.98
+Selected: drink . Price: 0.99
+Selected: drink . Price: 0.99
+7.960000000000001
 </pre>
 </div>
 </div>
