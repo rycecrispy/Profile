@@ -35,6 +35,6 @@ class QuizMasterRest:
     # building RESTapi resources/interfaces, these routes are added to Web Server
     quiz_master_api.add_resource(_CreateQuiz, '/create/<string:user>/<string:subject>/<int:totalQsInQuiz>')
     quiz_master_api.add_resource(_Read, '/')
-    quiz_master_api.add_resource(_CheckAnswer, '/checkanswer')
+    # quiz_master_api.add_resource(_CheckAnswer, '/checkanswer')
     
  
