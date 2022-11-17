@@ -153,4 +153,21 @@ tags: [html, liquid, javascript]
         }
         }
     }
+convertBinaryToString('11111000');
+convertBinaryToString('01100001');
+convertBinaryToString('01100010');
+convertBinaryToString('11101111');
+// convertBinaryToString('011000010110001001100011'); 
+
+function convertBinaryToString(bitString) {
+    console.log('\n--------------------------------');
+    // parse inputs string of binary to integer
+    resultInt = parseInt(bitString, 2);
+    console.log('int result:', resultInt);
+    
+    // converts integer to string
+    resultString = String.fromCharCode(resultInt);
+    console.log('converted string: ', resultString);
+}
+
 </script>
