@@ -24,6 +24,7 @@ tags: [html, liquid, javascript]
             <tr id="table">
                 <th>Plus</th>
                 <th>Binary</th>
+                <th>Character</th>
                 <th>Octal</th>
                 <th>Hexadecimal</th>
                 <th>Decimal</th>
@@ -32,6 +33,7 @@ tags: [html, liquid, javascript]
             <tr>
                 <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
                 <td id="binary">00000000</td>
+                <td id="character"></td>
                 <td id="octal">0</td>
                 <td id="hexadecimal">0</td>
                 <td id="decimal">0</td>
@@ -60,6 +62,9 @@ tags: [html, liquid, javascript]
             </table>
         </div>
     </div>
+    <div id="chardisplay">
+    </div>
+    
 </div>
 
 <script>
@@ -87,6 +92,7 @@ tags: [html, liquid, javascript]
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
+        document.getElementById('character').innerHTML = convert8BitsToChar(decimal_2_base(binary, 2));
     }
     //
     function decimal_2_base(decimal, base) {
@@ -153,30 +159,52 @@ tags: [html, liquid, javascript]
         }
         }
     }
-    function convert8BitsToString(bitString) {
+    function convert8BitsToChar(bitString) {
     
     // parse inputs string of binary to integer
-    resultInt = parseInt(bitString, 2);
-    console.log('int result:', resultInt);
+        resultInt = parseInt(bitString, 2);
+        console.log('int result:', resultInt);
     
-    // converts integer to string
-    resultString = String.fromCharCode(resultInt);
-    console.log('converted char: ', resultString);
-    return resultString;
-}
-// call and  assign the result returned by convertLargeBinaryToString to a variable named convertedString
-convertedString = convertLargeBinaryToString('011000010110001001100011');
-console.log('converted string= ' + convertedString);
+        // converts integer to string
+        resultString = String.fromCharCode(resultInt);
+        console.log('converted char: ', resultString);
+        if (!isPrintable(resultString)) {
+            console.log('Character is not printable');
+            document.getElementById('chardisplay').innerHTML = 'Character ' + resultString + ' is not printable'; 
+        }
+        else {
+            document.getElementById('chardisplay').innerHTML = 'Character ' + resultString + ' is  printable'; 
+        }
 
-function convertLargeBinaryToString(largeBin)
-{
-    var resultString = '';
-    length = largeBin.length;
-    for(i=0; i < length; i += 8) {
-        result = largeBin.substr(i, 8);
-        charResult = convert8BitsToString(result);
-        resultString = resultString.concat(charResult);
+        return resultString;
     }
-    return resultString;
-}
+    // call and  assign the result returned by convertLargeBinaryToString to a variable named convertedString
+
+    convertedString = convertLargeBinaryToString('011000010110001001100011'); // convert binary to string abc
+    console.log('converted string= ' + convertedString);
+
+    function convertLargeBinaryToString(largeBin)
+    {
+        var resultString = '';
+        length = largeBin.length;
+        for(i=0; i < length; i += 8) {
+            result = largeBin.substr(i, 8);
+            charResult = convert8BitsToChar(result);
+            resultString = resultString.concat(charResult);
+        }
+        return resultString;
+    }
+
+    function isPrintable(ch) {
+        const charRanges = [
+            '0-9',  // Numeric
+            'a-z',  // Latin
+            'α-ω',  // Greek
+            '一-龯', // Japanese -- https://gist.github.com/terrancesnyder/1345094
+            '\uFB1D-\uFB4F', // Hebrew (a few in range are unprintable)
+            '!"#$%&\'()*+,.\/:;<=>?@\\[\\] ^_`{|}~-' // Special charcters
+            ];
+        const PrintableUnicode = new RegExp(`^[${charRanges.join('')}]*$`, 'i');
+        return PrintableUnicode.test(ch);
+    }
 </script>
