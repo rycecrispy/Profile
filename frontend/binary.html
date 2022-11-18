@@ -257,23 +257,32 @@ window.onload = wrap_img;
         }
         }
     }
-convertBinaryToString('11111000');
-convertBinaryToString('01100001');
-convertBinaryToString('01100010');
-convertBinaryToString('11101111');
-// convertBinaryToString('011000010110001001100011'); 
-
-function convertBinaryToString(bitString) {
-    console.log('\n--------------------------------');
+    function convert8BitsToString(bitString) {
+    
     // parse inputs string of binary to integer
     resultInt = parseInt(bitString, 2);
     console.log('int result:', resultInt);
     
     // converts integer to string
     resultString = String.fromCharCode(resultInt);
-    console.log('converted string: ', resultString);
+    console.log('converted char: ', resultString);
+    return resultString;
 }
+// call and  assign the result returned by convertLargeBinaryToString to a variable named convertedString
+convertedString = convertLargeBinaryToString('011000010110001001100011');
+console.log('converted string= ' + convertedString);
 
+function convertLargeBinaryToString(largeBin)
+{
+    var resultString = '';
+    length = largeBin.length;
+    for(i=0; i < length; i += 8) {
+        result = largeBin.substr(i, 8);
+        charResult = convert8BitsToString(result);
+        resultString = resultString.concat(charResult);
+    }
+    return resultString;
+}
 </script>
 
 
