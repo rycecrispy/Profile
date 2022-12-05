@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -238,13 +238,32 @@ froth froth froth froth froth froth froth
  
 <span class="c1"># function to reverse the string</span>
 <span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">strs</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">strs</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">strs</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    
+<span class="k">def</span> <span class="nf">ReverseNumber</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">reverse</span><span class="p">(</span><span class="n">DecimalToBinary</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
  
 <span class="c1"># Driver Code</span>
-<span class="n">num</span> <span class="o">=</span> <span class="mi">67</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Binary of num 67 is:"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="n">reverse</span><span class="p">(</span><span class="n">DecimalToBinary</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">""</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">s</span> <span class="o">!=</span> <span class="s2">"q"</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Enter a number or type 'q' to quit."</span><span class="p">)</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">s</span> <span class="o">!=</span> <span class="s2">"q"</span><span class="p">:</span>
+            <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">ReverseNumber</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Binary of"</span><span class="p">,</span> <span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="s2">"is:"</span><span class="p">,</span> <span class="p">(</span><span class="n">result</span><span class="p">))</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="s2">"The length of"</span><span class="p">,</span> <span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="p">,</span> <span class="s2">"is:"</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">))))</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">))</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+                <span class="nb">print</span> <span class="p">(</span><span class="s2">"Stream Crazy:B「指先のアリアドネ」 あんさんぶるスターズ！！ Music ゲームサイズMV"</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span> <span class="p">(</span><span class="s2">"Stream Crazy:B &amp; UNDEAD「U.S.A.」あんさんぶるスターズ！！ Music ゲームサイズMV"</span><span class="p">)</span>
+                
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">"Invalid input."</span><span class="p">)</span>
+
+<span class="c1"># my additions to the code that i accidently deleted twice but it's ok i screenshotted</span>
+<span class="c1"># ignore how i only have like 1 commit I did this all on a python emulator because I didn't want to get my laptop</span>
 </pre></div>
 
     </div>
@@ -257,7 +276,21 @@ froth froth froth froth froth froth froth
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Binary of num 67 is: 1000011
+<pre>
+Enter a number or type 'q' to quit.
+Binary of 23125 is: 101101001010101
+The length of 101101001010101 is: 15
+Stream Crazy:B「指先のアリアドネ」 あんさんぶるスターズ！！ Music ゲームサイズMV
+
+Enter a number or type 'q' to quit.
+Binary of 4 is: 100
+The length of 100 is: 3
+Stream Crazy:B &amp; UNDEAD「U.S.A.」あんさんぶるスターズ！！ Music ゲームサイズMV
+
+Enter a number or type 'q' to quit.
+Invalid input.
+
+Enter a number or type 'q' to quit.
 </pre>
 </div>
 </div>
