@@ -3,34 +3,34 @@ layout: page
 permalink: /vocabulary/
 title: Vocab
 ---
-Compsci Vocab
+# Compsci Vocab
 
-Unit 2 Binary/Data Terms
+## Unit 2 Binary/Data Terms
 - Bits - the smallest unit of data that a computer can process and store
 - Bytes - A unit of data that is eight binary digits long
 - Hexadecimal/Nibbles - A base-16 numbering system that uses the digits 0 through 9 and the letters A through F to represent data, including nibbles and bytes
 
-Binary Numbers:
+## Binary Numbers:
 - Unsigned Integer - Integers that have the property that they don't have a + or - sign associated with them
 - Signed Integer - Integers that can be positive or negative
 - Floating Point - A variable type that is used to store floating-point number values
 
-Binary Data Abstractions: 
+## Binary Data Abstractions: 
 - Boolean - A logical data type that can have only the values true or false
 - ASCII - A standard data-encoding format for electronic communication between computers
 - Unicode - The universal character representation standard for text in computer processing
 - RGB - A system for representing the colors to be used on a computer display
 
-Data Compression:
+## Data Compression:
 - Lossy - A data encoding and compression technique that deliberately discards some data in the compression process
 - Lossless - A type of compression that restores and rebuilds file data in its original form after the file is decompressed
 
-Unit 3 Algorithm/Programming Terms
+## Unit 3 Algorithm/Programming Terms
 - Variables - an abstract storage location paired with an associated symbolic name
 - Data Types - Strings, Characters,Integers, Floats, or Booleans
 - Assignment Operators - An assignment statement that sets aor re-sets the value sto- - red in the storage location(s) denoted by a variable name
 
-Managing Complexity with Variables:
+## Managing Complexity with Variables:
 - Lists - An abstract data type that represents a finite number of ordered values, where the same value may occur more than once
 - 2D Lists - A list used to store objects
 - Dictionaries - An abstract data type that defines an unordered collection of data as a set of key-value pairs
@@ -52,7 +52,7 @@ Managing Complexity with Variables:
 - Lower - A value that is lesser than or equal to every element of a set of data
 - Traversing Strings - Accessing all the elements of the string one after the other by using the subscript
 
-Python:
+## Python:
 - If, Elif, Else conditionals - Conditional statements that provide you with the decision making that is required when you want to execute code based on a particular condition
 - Nested Selection Statements - Structures are used when more than one decision must be made before carrying out a task
 - For, While loops with Range, with List - Loops used to repeat a section of code an unknown number of times until a specific condition is met
