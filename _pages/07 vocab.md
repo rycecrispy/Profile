@@ -1,8 +1,7 @@
 ---
-layout: categories
-permalink: /categories/
+layout: page
+permalink: /vocabulary/
 title: Vocab
-search_exclude: true
 ---
 Compsci Vocab
 
