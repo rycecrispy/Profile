@@ -14,7 +14,6 @@ title: Vocab
 - Unsigned Integer - Integers that have the property that they don't have a + or - sign associated with them
 - Signed Integer - Integers that can be positive or negative
 - Floating Point - A variable type that is used to store floating-point number values
-  - (Ex:)
 
 ## Binary Data Abstractions: 
 - Boolean - A logical data type that can have only the values true or false
@@ -66,7 +65,7 @@ title: Vocab
 - Upper - A value that is greater than or equal to every element of a set of data
 - Lower - A value that is lesser than or equal to every element of a set of data
 - Traversing Strings - Accessing all the elements of the string one after the other by using the subscript
-  - (Ex: )
+  - (Ex: if/else statement that evaluates each element in a string)
 
 ## Python:
 - If, Elif, Else conditionals - Conditional statements that provide you with the decision making that is required when you want to execute code based on a particular condition
@@ -75,6 +74,7 @@ title: Vocab
   - (Ex: if x > y:, if x > 10, print x, else: print y, else: (etc., etc.))
 - For, While loops with Range, with List - Loops used to repeat a section of code an unknown number of times until a specific condition is met
 - Combining loops with conditionals to Break - Loops that stop when a specific condition is met, when they would normally continue forever otherwise
+  - (Ex: while loop with an if/else print that will end the loop)
 - Continue - A statement that forces the next iteration of the loop to take place, skipping any code in between
 - Procedural Abstraction - Sections of code that have variable parameters
 - Python Def procedures - Procedures that allow us to group a block of code under a name, known as a procedure name
