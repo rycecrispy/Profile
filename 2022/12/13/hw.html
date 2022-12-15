@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      7 min read
     
 </span></p>
 
@@ -167,15 +167,35 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
+<span class="n">myclothes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"red shoes"</span><span class="p">,</span> <span class="s2">"green pants"</span><span class="p">,</span> <span class="s2">"tie"</span><span class="p">,</span> <span class="s2">"belt"</span><span class="p">]</span>
+
 <span class="k">def</span> <span class="nf">mycloset</span><span class="p">():</span>
-    <span class="n">myclothes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"red shoes"</span><span class="p">,</span> <span class="s2">"green pants"</span><span class="p">,</span> <span class="s2">"tie"</span><span class="p">,</span> <span class="s2">"belt"</span><span class="p">]</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">myclothes</span><span class="p">)</span>
 
-<span class="n">mycloset</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="k">def</span> <span class="nf">addCloth</span><span class="p">():</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Do you want to add any clothes?"</span><span class="p">)</span>    
+    <span class="k">if</span> <span class="n">a</span> <span class="o">!=</span> <span class="s2">"No"</span><span class="p">:</span>
+        <span class="n">clothesAppend</span> <span class="o">=</span> <span class="n">myclothes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">clothesAppend</span> <span class="o">=</span> <span class="n">myclothes</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">clothesAppend</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">clothesAppend</span>
+
+<span class="k">def</span> <span class="nf">removeCloth</span><span class="p">():</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Do you want to remove any clothes?"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">r</span> <span class="o">!=</span> <span class="s2">"No"</span><span class="p">:</span>
+        <span class="n">clothesRemove</span> <span class="o">=</span> <span class="n">myclothes</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">clothesRemove</span> <span class="o">=</span> <span class="n">myclothes</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">removeCloth</span><span class="p">)</span>
+
 <span class="c1">#random.choice(mycloset)</span>
 
 <span class="n">mycloset</span><span class="p">()</span>
-
+<span class="n">addCloth</span><span class="p">()</span>
+<span class="n">removeCloth</span><span class="p">()</span>
 
 <span class="c1"># add myclothes function</span>
 <span class="c1"># trash myclothes function</span>
@@ -190,18 +210,34 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['red shoes', 'green pants', 'tie', 'belt']
+Do you want to add any clothes?
+None
+Do you want to remove any clothes?
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb Cell 4</span> in <span class="ansi-cyan-fg">&lt;cell line: 8&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4'&gt;5&lt;/a&gt;</span>     myclothes = ["red shoes", "green pants", "tie", "belt"]
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5'&gt;6&lt;/a&gt;</span>     print(myclothes)
-<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span> mycloset.append(input())
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8'&gt;9&lt;/a&gt;</span> #random.choice(mycloset)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span> mycloset()
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb Cell 4</span> in <span class="ansi-cyan-fg">&lt;cell line: 32&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=29'&gt;30&lt;/a&gt;</span> mycloset()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=30'&gt;31&lt;/a&gt;</span> addCloth()
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=31'&gt;32&lt;/a&gt;</span> removeCloth()
 
-<span class="ansi-red-fg">AttributeError</span>: 'function' object has no attribute 'append'</pre>
+<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb Cell 4</span> in <span class="ansi-cyan-fg">removeCloth</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=20'&gt;21&lt;/a&gt;</span> print("Do you want to remove any clothes?")
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=21'&gt;22&lt;/a&gt;</span> if r != "No":
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=22'&gt;23&lt;/a&gt;</span>     clothesRemove = myclothes.remove(r)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=23'&gt;24&lt;/a&gt;</span> else:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=24'&gt;25&lt;/a&gt;</span>     clothesRemove = myclothes
+
+<span class="ansi-red-fg">ValueError</span>: list.remove(x): x not in list</pre>
 </div>
 </div>
 
@@ -229,29 +265,56 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
-<span class="k">def</span> <span class="nf">randomnum</span><span class="p">():</span> <span class="c1"># function for generating random int</span>
+<span class="k">def</span> <span class="nf">randomnum</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">8</span><span class="p">):</span> <span class="c1"># function for generating random int</span>
     <span class="n">randNumList</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">8</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">randNumList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">randNumList</span><span class="p">)</span> 
-<span class="n">randomnum</span><span class="p">()</span>
+        <span class="n">randNumList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="p">))</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"Randomly generated number list:"</span><span class="p">,</span> <span class="n">randNumList</span><span class="p">)</span> 
+    <span class="k">return</span> <span class="n">randNumList</span>
 
-<span class="k">def</span> <span class="nf">converttobin</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="c1"># function for converting decimal to binary</span>
-    <span class="c1"># if this looks familiar it's because I copied it from my past HWs I'm not doing it again pleasggefghhhhhhh</span>
-    <span class="n">divValue</span> <span class="o">=</span> <span class="n">n</span> <span class="c1"># input</span>
+<span class="c1"># Input: [3,6,7]</span>
+<span class="k">def</span> <span class="nf">converttobin</span><span class="p">(</span><span class="n">randNumList</span><span class="p">):</span> <span class="c1"># function for converting decimal to binary</span>
+    <span class="n">divValue</span> <span class="o">=</span> <span class="n">randNumList</span> <span class="c1"># input (which is the randNumList)</span>
     <span class="n">remainder</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="s1">''</span> <span class="c1"># keeps track of 1's in the loop (so it can go infinitely)</span>
-    <span class="k">while</span> <span class="n">divValue</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">remainder</span> <span class="o">=</span> <span class="n">divValue</span> <span class="o">%</span> <span class="mi">2</span>
-        <span class="n">divValue</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)(</span><span class="n">divValue</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">remainder</span><span class="p">)</span> <span class="o">+</span> <span class="n">x</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    
+    <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>    
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">randNumList</span><span class="p">:</span>
+    <span class="c1">#   convert eah num to binary string and append it to result list</span>
+        <span class="n">divValue</span> <span class="o">=</span> <span class="n">num</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="s1">''</span> <span class="c1"># keeps track of 1's in the loop (so it can go infinitely)</span>
+        <span class="k">while</span> <span class="n">divValue</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">remainder</span> <span class="o">=</span> <span class="n">divValue</span> <span class="o">%</span> <span class="mi">2</span>
+            <span class="n">divValue</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)(</span><span class="n">divValue</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">remainder</span><span class="p">)</span> <span class="o">+</span> <span class="n">x</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">results</span>
 
+<span class="c1"># FIrst, a function for randomizing decimal number 0-255</span>
+<span class="c1"># Next, a function for converting this to a 8-bit binary number (one bit per person)</span>
+<span class="c1"># Lastly, a function to read the binary bits, and assign each person a label (zombie or naw) based on the position of 0s and 1s</span>
 <span class="k">def</span> <span class="nf">survivors</span><span class="p">(</span><span class="n">binary</span><span class="p">):</span> <span class="c1"># function to assign position</span>
-    <span class="n">survivorstatus</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Jiya"</span><span class="p">,</span> <span class="s2">"Shruthi"</span><span class="p">,</span> <span class="s2">"Noor"</span><span class="p">,</span> <span class="s2">"Ananya"</span> <span class="p">,</span> <span class="s2">"Peter Parker"</span><span class="p">,</span> <span class="s2">"Andrew Garfield"</span><span class="p">,</span> <span class="s2">"Tom Holland"</span><span class="p">,</span> <span class="s2">"Tobey Maguire"</span><span class="p">]</span>
+    <span class="n">survivorstatus</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Kohaku Oukawa"</span><span class="p">,</span> <span class="s2">"Madara Mikejima"</span><span class="p">,</span> <span class="s2">"Kaname Tojou"</span><span class="p">,</span> <span class="s2">"Aira Shiratori"</span> <span class="p">,</span> <span class="s2">"Kunikuzushi"</span><span class="p">,</span> <span class="s2">"Kazuha"</span><span class="p">,</span> <span class="s2">"Rook Hunt"</span><span class="p">,</span> <span class="s2">"Rinne Amagi"</span><span class="p">]</span>
     <span class="c1"># replace the names above with your choice of people in the house</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">zombie</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">alive</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">resultList</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">binary</span><span class="p">:</span>
+        <span class="n">person</span> <span class="o">=</span> <span class="n">survivorstatus</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="s1">'0'</span><span class="p">:</span>
+            <span class="n">resultList</span><span class="p">[</span><span class="n">person</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">"Zombie"</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">resultList</span><span class="p">[</span><span class="n">person</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Alive"</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">resultList</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">resultList</span>
+          
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">ranNums</span> <span class="o">=</span> <span class="n">randomnum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+    <span class="n">binaryList</span> <span class="o">=</span> <span class="n">converttobin</span><span class="p">(</span><span class="n">ranNums</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">binaryList</span><span class="p">)</span>
+    <span class="n">binary</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">binaryList</span><span class="p">)</span>
+    <span class="n">survivors</span><span class="p">(</span><span class="n">binary</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -264,7 +327,9 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[6, 6, 4, 4, 7, 2, 2, 0]
+<pre>Randomly generated number list: [73, 40, 46, 25, 1, 6, 12, 28]
+['01001001', '00101000', '00101110', '00011001', '00000001', '00000110', '00001100', '00011100']
+{'Kohaku Oukawa': 'Zombie', 'Madara Mikejima': 'Zombie', 'Kaname Tojou': 'Alive', 'Aira Shiratori': 'Zombie', 'Kunikuzushi': 'Alive', 'Kazuha': 'Zombie', 'Rook Hunt': 'Zombie', 'Rinne Amagi': 'Zombie'}
 </pre>
 </div>
 </div>
@@ -289,6 +354,50 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">pull</span><span class="p">():</span>
+    <span class="n">roll</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># array for each result from rolling</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span> <span class="c1"># how many times the dice is rolled</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"The amount of rolls you want is:"</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span> <span class="c1"># printing number of rolls that are input</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span> <span class="c1"># for the number that was put in the input, start of the for loop</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="c1"># the results are any randomly generated number from 1 - 6</span>
+        <span class="n">roll</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c1"># appends the randomly generated results to an array</span>
+    <span class="k">return</span> <span class="n">roll</span> <span class="c1">#returns function</span>
+   
+<span class="n">dices</span> <span class="o">=</span> <span class="n">pull</span><span class="p">()</span> <span class="c1"># naming the function</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Your dice rolls are:"</span><span class="p">,</span> <span class="n">dices</span><span class="p">)</span> <span class="c1"># final print of the array</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The amount of rolls you want is: 30
+Your dice rolls are: [2, 1, 4, 5, 2, 1, 2, 3, 2, 3, 2, 1, 3, 4, 4, 3, 4, 3, 1, 6, 3, 6, 3, 6, 5, 1, 2, 4, 2, 6]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -365,7 +474,6 @@ window.onload = wrap_img;
 
 <span class="n">Q1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
 <span class="k">if</span> <span class="n">Q1</span> <span class="o">==</span> <span class="p">:</span>
-    
 
 <span class="n">Q2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
 <span class="k">if</span> <span class="n">Q2</span> <span class="o">==</span> <span class="p">:</span>
@@ -408,6 +516,27 @@ Be creative! Think about instances in your own life, science, puzzles that can b
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># 3 lists</span>
+<span class="c1"># randint.(0, 100), generate 10</span>
+<span class="c1"># if randint 0-75, print from the 3star list, 76-99, print from the 4* list, 100, print from the 5* list</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
