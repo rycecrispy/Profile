@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      8 min read
     
 </span></p>
 
@@ -450,19 +450,106 @@ Square root of 3.45 = 1
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">turtle</span>
 
-<span class="k">def</span> <span class="nf">printRan</span><span class="p">(</span><span class="n">randNum</span><span class="p">):</span>
-    <span class="n">randNum</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">"Randomly generated number:"</span><span class="p">,</span> <span class="n">randNum</span><span class="p">)</span>
+<span class="n">turns</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'red'</span><span class="p">,</span> <span class="s1">'green'</span><span class="p">,</span> <span class="s1">'blue'</span><span class="p">,</span> <span class="s1">'yellow'</span><span class="p">]:</span>
+<span class="n">randNum</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">sideLen</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">"Randomly generated number:"</span><span class="p">,</span> <span class="n">randNum</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">"User input side length:"</span><span class="p">,</span> <span class="n">sideLen</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'red'</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">,</span> <span class="s1">'yellow'</span><span class="p">,</span> <span class="s1">'green'</span><span class="p">,</span> <span class="s1">'blue'</span><span class="p">]:</span>
     <span class="n">t</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-    <span class="k">while</span> <span class="n">randNum</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">turns</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">randNum</span><span class="p">):</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">sideLen</span><span class="p">)</span>
         <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">360</span><span class="o">/</span><span class="n">randNum</span><span class="p">)</span>
+        <span class="n">turns</span> <span class="o">=</span> <span class="n">turns</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">turns</span> <span class="o">==</span> <span class="n">randNum</span><span class="p">:</span>
+            <span class="k">break</span>
+
+
+<span class="c1"># So, my turtle doesn't like me and doesn't want to work so I just made this 'theoretical' code</span>
+<span class="c1"># Essentially, it's just supposed to generate a random number, which the code marks as the 'randNum', or in other words, the amount of sides</span>
+<span class="c1"># The user can also choose to input a side length</span>
+<span class="c1"># It then prints the side length and number of sides (these are mostly for testing)</span>
+<span class="c1"># The color is randomly selected</span>
+<span class="c1"># Then the turtle will move in accordance to the numbers it's been dealt</span>
+<span class="c1"># t.forward is the side lengths, and it will move in accordance to the input</span>
+<span class="c1"># t.left is the corners of the shape; since a full circle is 360 degrees, the turtle will turn in a degree that is 360/the randomly generated number so it can have the right amount of sides</span>
+<span class="c1"># If I actually coded this right, the turtle will end at the same place it started and keep looping forever because I didn't put an end code. But that's ok my turtle doesn't work so you won't ever have to see its eternal suffering, brought on by the stupidity of none other than my lack of sleep and endless desire to drop school completely</span>
+
+<span class="c1"># Actually I lied, I added the ending code</span>
+<span class="c1"># There's a turn counter that adds 1 to a neat little index and if that index = the amount of rotations the turtle will stop (hopefully. It can just keep going if it wants to. Goodbye turtle you will be missed.)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TclError</span>                                  Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-12-3.14-Libraries.ipynb Cell 11</span> in <span class="ansi-cyan-fg">&lt;cell line: 4&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-12-3.14-Libraries.ipynb#X15sdnNjb2RlLXJlbW90ZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> import random
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-12-3.14-Libraries.ipynb#X15sdnNjb2RlLXJlbW90ZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> import turtle
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-12-3.14-Libraries.ipynb#X15sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> t = turtle.Turtle()
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-12-3.14-Libraries.ipynb#X15sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5'&gt;6&lt;/a&gt;</span> randNum = []
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-12-3.14-Libraries.ipynb#X15sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span> def printRan(randNum):
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/turtle.py:3814</span>, in <span class="ansi-cyan-fg">Turtle.__init__</span><span class="ansi-blue-fg">(self, shape, undobuffersize, visible)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3809</span> def __init__(self,
+<span class="ansi-green-intense-fg ansi-bold">   3810</span>              shape=_CFG["shape"],
+<span class="ansi-green-intense-fg ansi-bold">   3811</span>              undobuffersize=_CFG["undobuffersize"],
+<span class="ansi-green-intense-fg ansi-bold">   3812</span>              visible=_CFG["visible"]):
+<span class="ansi-green-intense-fg ansi-bold">   3813</span>     if Turtle._screen is None:
+<span class="ansi-green-fg">-&gt; 3814</span>         Turtle._screen = Screen()
+<span class="ansi-green-intense-fg ansi-bold">   3815</span>     RawTurtle.__init__(self, Turtle._screen,
+<span class="ansi-green-intense-fg ansi-bold">   3816</span>                        shape=shape,
+<span class="ansi-green-intense-fg ansi-bold">   3817</span>                        undobuffersize=undobuffersize,
+<span class="ansi-green-intense-fg ansi-bold">   3818</span>                        visible=visible)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/turtle.py:3664</span>, in <span class="ansi-cyan-fg">Screen</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">   3660</span> """Return the singleton screen object.
+<span class="ansi-green-intense-fg ansi-bold">   3661</span> If none exists at the moment, create a new one and return it,
+<span class="ansi-green-intense-fg ansi-bold">   3662</span> else return the existing one."""
+<span class="ansi-green-intense-fg ansi-bold">   3663</span> if Turtle._screen is None:
+<span class="ansi-green-fg">-&gt; 3664</span>     Turtle._screen = _Screen()
+<span class="ansi-green-intense-fg ansi-bold">   3665</span> return Turtle._screen
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/turtle.py:3680</span>, in <span class="ansi-cyan-fg">_Screen.__init__</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3673</span> def __init__(self):
+<span class="ansi-green-intense-fg ansi-bold">   3674</span>     # XXX there is no need for this code to be conditional,
+<span class="ansi-green-intense-fg ansi-bold">   3675</span>     # as there will be only a single _Screen instance, anyway
+<span class="ansi-green-intense-fg ansi-bold">   3676</span>     # XXX actually, the turtle demo is injecting root window,
+<span class="ansi-green-intense-fg ansi-bold">   3677</span>     # so perhaps the conditional creation of a root should be
+<span class="ansi-green-intense-fg ansi-bold">   3678</span>     # preserved (perhaps by passing it as an optional parameter)
+<span class="ansi-green-intense-fg ansi-bold">   3679</span>     if _Screen._root is None:
+<span class="ansi-green-fg">-&gt; 3680</span>         _Screen._root = self._root = _Root()
+<span class="ansi-green-intense-fg ansi-bold">   3681</span>         self._root.title(_Screen._title)
+<span class="ansi-green-intense-fg ansi-bold">   3682</span>         self._root.ondestroy(self._destroy)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/turtle.py:435</span>, in <span class="ansi-cyan-fg">_Root.__init__</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    434</span> def __init__(self):
+<span class="ansi-green-fg">--&gt; 435</span>     TK.Tk.__init__(self)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/tkinter/__init__.py:2270</span>, in <span class="ansi-cyan-fg">Tk.__init__</span><span class="ansi-blue-fg">(self, screenName, baseName, className, useTk, sync, use)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2268</span>         baseName = baseName + ext
+<span class="ansi-green-intense-fg ansi-bold">   2269</span> interactive = False
+<span class="ansi-green-fg">-&gt; 2270</span> self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
+<span class="ansi-green-intense-fg ansi-bold">   2271</span> if useTk:
+<span class="ansi-green-intense-fg ansi-bold">   2272</span>     self._loadtk()
+
+<span class="ansi-red-fg">TclError</span>: no display name and no $DISPLAY environment variable</pre>
+</div>
+</div>
+
 </div>
 </div>
 
