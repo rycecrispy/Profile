@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      22 min read
     
 </span></p>
 
@@ -174,27 +174,26 @@ window.onload = wrap_img;
 
 <span class="k">def</span> <span class="nf">addCloth</span><span class="p">():</span>
     <span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Do you want to add any clothes?"</span><span class="p">)</span>    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Do you want to add any clothes? Type 'No' or the item name."</span><span class="p">)</span>    
     <span class="k">if</span> <span class="n">a</span> <span class="o">!=</span> <span class="s2">"No"</span><span class="p">:</span>
-        <span class="n">clothesAppend</span> <span class="o">=</span> <span class="n">myclothes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">clothesAppend</span> <span class="o">=</span> <span class="n">myclothes</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">clothesAppend</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">clothesAppend</span>
+        <span class="n">myclothes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Object"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">"has been added."</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">myclothes</span>
 
 <span class="k">def</span> <span class="nf">removeCloth</span><span class="p">():</span>
     <span class="n">r</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Do you want to remove any clothes?"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Do you want to remove any clothes? Type 'No' or the item name."</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">r</span> <span class="o">!=</span> <span class="s2">"No"</span><span class="p">:</span>
-        <span class="n">clothesRemove</span> <span class="o">=</span> <span class="n">myclothes</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">clothesRemove</span> <span class="o">=</span> <span class="n">myclothes</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">removeCloth</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">r</span> <span class="ow">in</span> <span class="n">myclothes</span><span class="p">):</span>
+            <span class="n">myclothes</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">myclothes</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Object"</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="s2">"has been removed."</span><span class="p">)</span>
 
 <span class="c1">#random.choice(mycloset)</span>
 
 <span class="n">mycloset</span><span class="p">()</span>
 <span class="n">addCloth</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myclothes</span><span class="p">)</span>
 <span class="n">removeCloth</span><span class="p">()</span>
 
 <span class="c1"># add myclothes function</span>
@@ -212,32 +211,13 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>['red shoes', 'green pants', 'tie', 'belt']
-Do you want to add any clothes?
-None
-Do you want to remove any clothes?
+Do you want to add any clothes? Type 'No' or the item name.
+Object potato has been added.
+['red shoes', 'green pants', 'tie', 'belt', 'potato']
+Do you want to remove any clothes? Type 'No' or the item name.
+['red shoes', 'green pants', 'tie', 'potato']
+Object belt has been removed.
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb Cell 4</span> in <span class="ansi-cyan-fg">&lt;cell line: 32&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=29'&gt;30&lt;/a&gt;</span> mycloset()
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=30'&gt;31&lt;/a&gt;</span> addCloth()
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=31'&gt;32&lt;/a&gt;</span> removeCloth()
-
-<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb Cell 4</span> in <span class="ansi-cyan-fg">removeCloth</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=20'&gt;21&lt;/a&gt;</span> print("Do you want to remove any clothes?")
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=21'&gt;22&lt;/a&gt;</span> if r != "No":
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=22'&gt;23&lt;/a&gt;</span>     clothesRemove = myclothes.remove(r)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=23'&gt;24&lt;/a&gt;</span> else:
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=24'&gt;25&lt;/a&gt;</span>     clothesRemove = myclothes
-
-<span class="ansi-red-fg">ValueError</span>: list.remove(x): x not in list</pre>
 </div>
 </div>
 
@@ -413,7 +393,7 @@ Your dice rolls are: [2, 1, 4, 5, 2, 1, 2, 3, 2, 3, 2, 1, 3, 4, 4, 3, 4, 3, 1, 6
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
-<li>A researcher gathers data about the effect of Advanced Placement®︎ classes on students' success in college and career, and develops a simulation to show how a sequence of AP classes affect a hypothetical student's pathway.Several school administrators are concerned that the simulation contains bias favoring high-income students, however.<ul>
+<li>A researcher gathers data about the effect of Advanced Placement®︎ classes on students' success in college and career, and develops a simulation to show how a sequence of AP classes affect a hypothetical student's pathway. Several school administrators are concerned that the simulation contains bias favoring high-income students, however.<ul>
 <li>answer options:<ol>
 <li>The simulation is an abstraction and therefore cannot contain any bias</li>
 <li>The simulation may accidentally contain bias due to the exclusion of details.</li>
@@ -454,8 +434,26 @@ Your dice rolls are: [2, 1, 4, 5, 2, 1, 2, 3, 2, 3, 2, 1, 3, 4, 4, 3, 4, 3, 1, 6
 <li>this question has 2 correct answers</li>
 </ul>
 </li>
-<li>YOUR OWN QUESTION; can be situational, pseudo code based, or vocab/concept based</li>
-<li>YOUR OWN QUESTION; can be situational, pseudo code based, or vocab/concept based</li>
+<li>Rinne Amagi wants to go to a casino, but Niki Shiina won't let him because he keeps wasting Niki's money, which is absolutely fair. He creates a computer simulation after much difficulty and suffering to gamble without Niki knowing, because he has an addiction. While his program is almost perfect, it lacks a good way to simulate a real casino, and the randomization is off. What are some things he could add to improve his simulation? (2 answers)<ul>
+<li>Answer Options<ol>
+<li>Niki Shiina dragging him out of the casino.</li>
+<li>A randomization function, where each result has different chances to appear based on a percentage.</li>
+<li>More items of different categories/ranks to make a bigger randomized simulation.</li>
+<li>Throw his computer against a wall and cry because he's weak.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Scaramouche has spent years trying to overthrow the Raiden Shogun, but to no avail. He is unfortunately the same element she is, and immunity is evil. He creates a simulation to determine what stance he should take to fight her, but thinks it's not close enough to reality. What could he add to his simulation to make it more realistic?<ul>
+<li>Answer Options<ol>
+<li>The Raiden Shogun's personal fox maiden.</li>
+<li>He should take into account whether the Shogun is injured or not.</li>
+<li>He should take the weather into account.</li>
+<li>He should consider his life choices and have an existencial breakdown.</li>
+</ol>
+</li>
+</ul>
+</li>
 </ol>
 
 </div>
@@ -471,26 +469,143 @@ Your dice rolls are: [2, 1, 4, 5, 2, 1, 2, 3, 2, 3, 2, 1, 3, 4, 4, 3, 4, 3, 1, 6
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">questions</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
 
+<span class="kn">import</span> <span class="nn">random</span>
 
-<span class="n">Q1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">Q1</span> <span class="o">==</span> <span class="p">:</span>
+<span class="n">questions_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1">#questions go here (remember to make them strings!)</span>
+    <span class="p">[</span><span class="s2">"A researcher gathers data about the effect of Advanced Placement classes on students' success in college and career, and develops a simulation to show how a sequence of AP classes affect a hypothetical student's pathway. Several school administrators are concerned that the simulation contains bias favoring high-income students, however."</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Jack is trying to plan his financial future using an online tool. The tool starts off by asking him to input details about his current finances and career. It then lets him choose different future scenarios, such as having children. For each scenario chosen, the tool does some calculations and outputs his projected savings at the ages of 35, 45, and 55.Would that be considered a simulation and why?"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Sylvia is an industrial engineer working for a sporting goods company. She is developing a baseball bat that can hit balls with higher accuracy and asks their software engineering team to develop a simulation to verify the design.Which of the following details is most important to include in this simulation?"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Ashlynn is an industrial engineer who is trying to design a safer parachute. She creates a computer simulation of the parachute opening at different heights and in different environmental conditions.What are advantages of running the simulation versus an actual experiment?"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Rinne Amagi wants to go to a casino, but Niki Shiina won't let him because he keeps wasting Niki's money, which is absolutely fair. He creates a computer simulation after much difficulty and suffering to gamble without Niki knowing, because he has an addiction. While his program is almost perfect, it lacks a good way to simulate a real casino, and the randomization is off. What are some things he could add to improve his simulation? (2 answers)"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Scaramouche has spent years trying to overthrow the Raiden Shogun, but to no avail. He is unfortunately the same element she is, and immunity is evil. He creates a simulation to determine what stance he should take to fight her, but thinks it's not close enough to reality. What could he add to his simulation to make it more realistic?"</span><span class="p">],</span>
 
-<span class="n">Q2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">Q2</span> <span class="o">==</span> <span class="p">:</span>
-   
-<span class="n">Q3</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">Q3</span> <span class="o">==</span> <span class="p">:</span>
-   
+<span class="p">]</span>
 
-<span class="n">Q4</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="n">correct</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">"The only way for the simulation to be biased is if the researcher intentionally used data that favored their desired output."</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s2">"Yes, it's a simulation because it is an abstraction of a real world scenario that enables the drawing of inferences."</span> <span class="p">],</span> 
+    <span class="p">[</span><span class="s2">"Accurate accounting for the effects of wind conditions on the movement of the ball."</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"The simulation can be run more safely than an actual experiment."</span><span class="p">,</span><span class="s2">"The simulation can test the parachute design in a wide range of environmental conditions that may be difficult to reliably reproduce in an experiment."</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">""</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"He should take the weather into account."</span><span class="p">],</span>
 
 
+<span class="p">]</span>
 
+<span class="n">answerChoices</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">"The simulation is an abstraction and therefore cannot contain any bias."</span><span class="p">,</span><span class="s2">"The simulation may accidentally contain bias due to the exclusion of details."</span><span class="p">,</span><span class="s2">"If the simulation is found to contain bias, then it is not possible to remove the bias from the simulation."</span><span class="p">,</span> <span class="s2">"The only way for the simulation to be biased is if the researcher intentionally used data that favored their desired output."</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"No, it's not a simulation because it does not include a visualization of the results."</span><span class="p">,</span> <span class="s2">"No, it's not a simulation because it does not include all the details of his life history and the future financial environment."</span><span class="p">,</span><span class="s2">"Yes, it's a simulation because it runs on a computer and includes both user input and computed output."</span><span class="p">,</span><span class="s2">"Yes, it's a simulation because it is an abstraction of a real world scenario that enables the drawing of inferences."</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Realistic sound effects based on the material of the baseball bat and the velocity of the hit."</span><span class="p">,</span><span class="s2">"A depiction of an audience in the stands with lifelike behavior in response to hit accuracy."</span><span class="p">,</span><span class="s2">"Accurate accounting for the effects of wind conditions on the movement of the ball."</span><span class="p">,</span><span class="s2">"A baseball field that is textured to differentiate between the grass and the dirt."</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"The simulation will not contain any bias that favors one body type over another, while an experiment will be biased."</span><span class="p">,</span><span class="s2">"The simulation can be run more safely than an actual experiment"</span><span class="p">,</span><span class="s2">"The simulation will accurately predict the parachute's safety level, while an experiment may be inaccurate due to faulty experimental design."</span><span class="p">,</span><span class="s2">"The simulation can test the parachute design in a wide range of environmental conditions that may be difficult to reliably reproduce in an experiment."</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Niki Shiina dragging him out of the casino."</span><span class="p">,</span><span class="s2">"A randomization function, where each result has different chances to appear based on a percentage."</span><span class="p">,</span><span class="s2">"More items of different categories/ranks to make a bigger randomized simulation."</span><span class="p">,</span><span class="s2">"Throw his computer against a wall and cry because he's weak."</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"The Raiden Shogun's personal fox maiden."</span><span class="p">,</span><span class="s2">"He should take into account whether the Shogun is injured or not."</span><span class="p">,</span><span class="s2">"He should take the weather into account."</span><span class="p">,</span><span class="s2">"He should consider his life choices and have an existencial breakdown."</span><span class="p">],</span>
+<span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span> <span class="s2">" you scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span><span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">))</span>
+<span class="n">points</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#empty string to register points</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">""</span>
+
+<span class="k">def</span> <span class="nf">questionloop</span><span class="p">():</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">s</span> <span class="o">!=</span> <span class="s2">"quit"</span> <span class="ow">and</span> <span class="n">count</span> <span class="o">&lt;=</span> <span class="mi">6</span><span class="p">):</span>
+        <span class="n">question</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">questions_list</span><span class="p">)</span> <span class="c1">#randomizes questions</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">answerChoices</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">"quit"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Quiz exited."</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">answercheck</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">question</span><span class="p">)</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">points</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">score</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Your final score is:"</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">answercheck</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">question</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">questions_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">question</span><span class="p">)</span> <span class="c1"># refers to the index of the question list</span>
+    <span class="n">matchedAnswers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span> <span class="o">==</span> <span class="n">s</span><span class="p">,</span> <span class="n">correct</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span> <span class="c1"># Filters wrong/right, if it's not in the list it's wrong, and that makes it appear as 'empty'</span>
+    <span class="c1"># (Tests, basically shows the len and if the len is &gt;1, the answer is correct) print(matchedAnswers , str(len(matchedAnswers)))</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matchedAnswers</span><span class="p">))</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># if the length was marked as 'none' (0) in the previous line, then it's measured (using len) and marked as incorrect</span>
+        <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># appends 1 point to the list of points</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="n">points</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Correct."</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># appends 0 points to the list of points</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Incorrect."</span><span class="p">)</span>
+    <span class="c1"># function to check if the answer was correct or not</span>
+
+<span class="n">questionloop</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['Jack is trying to plan his financial future using an online tool. The tool starts off by asking him to input details about his current finances and career. It then lets him choose different future scenarios, such as having children. For each scenario chosen, the tool does some calculations and outputs his projected savings at the ages of 35, 45, and 55.Would that be considered a simulation and why?']
+[['The simulation is an abstraction and therefore cannot contain any bias.', 'The simulation may accidentally contain bias due to the exclusion of details.', 'If the simulation is found to contain bias, then it is not possible to remove the bias from the simulation.', 'The only way for the simulation to be biased is if the researcher intentionally used data that favored their desired output.'], ["No, it's not a simulation because it does not include a visualization of the results.", "No, it's not a simulation because it does not include all the details of his life history and the future financial environment.", "Yes, it's a simulation because it runs on a computer and includes both user input and computed output.", "Yes, it's a simulation because it is an abstraction of a real world scenario that enables the drawing of inferences."]]
+asdjaskd
+[0]
+Incorrect.
+["A researcher gathers data about the effect of Advanced Placement classes on students' success in college and career, and develops a simulation to show how a sequence of AP classes affect a hypothetical student's pathway. Several school administrators are concerned that the simulation contains bias favoring high-income students, however."]
+[['The simulation is an abstraction and therefore cannot contain any bias.', 'The simulation may accidentally contain bias due to the exclusion of details.', 'If the simulation is found to contain bias, then it is not possible to remove the bias from the simulation.', 'The only way for the simulation to be biased is if the researcher intentionally used data that favored their desired output.'], ["No, it's not a simulation because it does not include a visualization of the results.", "No, it's not a simulation because it does not include all the details of his life history and the future financial environment.", "Yes, it's a simulation because it runs on a computer and includes both user input and computed output.", "Yes, it's a simulation because it is an abstraction of a real world scenario that enables the drawing of inferences."]]
+asdhasjd
+[0, 0]
+Incorrect.
+['Jack is trying to plan his financial future using an online tool. The tool starts off by asking him to input details about his current finances and career. It then lets him choose different future scenarios, such as having children. For each scenario chosen, the tool does some calculations and outputs his projected savings at the ages of 35, 45, and 55.Would that be considered a simulation and why?']
+[['The simulation is an abstraction and therefore cannot contain any bias.', 'The simulation may accidentally contain bias due to the exclusion of details.', 'If the simulation is found to contain bias, then it is not possible to remove the bias from the simulation.', 'The only way for the simulation to be biased is if the researcher intentionally used data that favored their desired output.'], ["No, it's not a simulation because it does not include a visualization of the results.", "No, it's not a simulation because it does not include all the details of his life history and the future financial environment.", "Yes, it's a simulation because it runs on a computer and includes both user input and computed output.", "Yes, it's a simulation because it is an abstraction of a real world scenario that enables the drawing of inferences."]]
+asdhjasd
+[0, 0, 0]
+Incorrect.
+['Jack is trying to plan his financial future using an online tool. The tool starts off by asking him to input details about his current finances and career. It then lets him choose different future scenarios, such as having children. For each scenario chosen, the tool does some calculations and outputs his projected savings at the ages of 35, 45, and 55.Would that be considered a simulation and why?']
+[['The simulation is an abstraction and therefore cannot contain any bias.', 'The simulation may accidentally contain bias due to the exclusion of details.', 'If the simulation is found to contain bias, then it is not possible to remove the bias from the simulation.', 'The only way for the simulation to be biased is if the researcher intentionally used data that favored their desired output.'], ["No, it's not a simulation because it does not include a visualization of the results.", "No, it's not a simulation because it does not include all the details of his life history and the future financial environment.", "Yes, it's a simulation because it runs on a computer and includes both user input and computed output.", "Yes, it's a simulation because it is an abstraction of a real world scenario that enables the drawing of inferences."]]
+asdhjk'
+[0, 0, 0, 0]
+Incorrect.
+['Jack is trying to plan his financial future using an online tool. The tool starts off by asking him to input details about his current finances and career. It then lets him choose different future scenarios, such as having children. For each scenario chosen, the tool does some calculations and outputs his projected savings at the ages of 35, 45, and 55.Would that be considered a simulation and why?']
+[['The simulation is an abstraction and therefore cannot contain any bias.', 'The simulation may accidentally contain bias due to the exclusion of details.', 'If the simulation is found to contain bias, then it is not possible to remove the bias from the simulation.', 'The only way for the simulation to be biased is if the researcher intentionally used data that favored their desired output.'], ["No, it's not a simulation because it does not include a visualization of the results.", "No, it's not a simulation because it does not include all the details of his life history and the future financial environment.", "Yes, it's a simulation because it runs on a computer and includes both user input and computed output.", "Yes, it's a simulation because it is an abstraction of a real world scenario that enables the drawing of inferences."]]
+asdasd
+[0, 0, 0, 0, 0]
+Incorrect.
+['Jack is trying to plan his financial future using an online tool. The tool starts off by asking him to input details about his current finances and career. It then lets him choose different future scenarios, such as having children. For each scenario chosen, the tool does some calculations and outputs his projected savings at the ages of 35, 45, and 55.Would that be considered a simulation and why?']
+[['The simulation is an abstraction and therefore cannot contain any bias.', 'The simulation may accidentally contain bias due to the exclusion of details.', 'If the simulation is found to contain bias, then it is not possible to remove the bias from the simulation.', 'The only way for the simulation to be biased is if the researcher intentionally used data that favored their desired output.'], ["No, it's not a simulation because it does not include a visualization of the results.", "No, it's not a simulation because it does not include all the details of his life history and the future financial environment.", "Yes, it's a simulation because it runs on a computer and includes both user input and computed output.", "Yes, it's a simulation because it is an abstraction of a real world scenario that enables the drawing of inferences."]]
+asdjkl
+[0, 0, 0, 0, 0, 0]
+Incorrect.
+['Jack is trying to plan his financial future using an online tool. The tool starts off by asking him to input details about his current finances and career. It then lets him choose different future scenarios, such as having children. For each scenario chosen, the tool does some calculations and outputs his projected savings at the ages of 35, 45, and 55.Would that be considered a simulation and why?']
+[['The simulation is an abstraction and therefore cannot contain any bias.', 'The simulation may accidentally contain bias due to the exclusion of details.', 'If the simulation is found to contain bias, then it is not possible to remove the bias from the simulation.', 'The only way for the simulation to be biased is if the researcher intentionally used data that favored their desired output.'], ["No, it's not a simulation because it does not include a visualization of the results.", "No, it's not a simulation because it does not include all the details of his life history and the future financial environment.", "Yes, it's a simulation because it runs on a computer and includes both user input and computed output.", "Yes, it's a simulation because it is an abstraction of a real world scenario that enables the drawing of inferences."]]
+asdasd
+[0, 0, 0, 0, 0, 0, 0]
+Incorrect.
+Your final score is: 0
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb Cell 11</span> in <span class="ansi-cyan-fg">&lt;cell line: 60&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#X13sdnNjb2RlLXJlbW90ZQ%3D%3D?line=56'&gt;57&lt;/a&gt;</span>     #make a function to check if the answer was correct or not
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#X13sdnNjb2RlLXJlbW90ZQ%3D%3D?line=58'&gt;59&lt;/a&gt;</span> questionloop()
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/Keira/vscode/Fastpages/_notebooks/2022-12-13-hw.ipynb#X13sdnNjb2RlLXJlbW90ZQ%3D%3D?line=59'&gt;60&lt;/a&gt;</span> answercheck()
+
+<span class="ansi-red-fg">TypeError</span>: answercheck() missing 2 required positional arguments: 's' and 'question'</pre>
+</div>
+</div>
+
 </div>
 </div>
 
