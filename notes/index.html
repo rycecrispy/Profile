@@ -76,22 +76,187 @@ window.onload = wrap_img;
   </header>
 
   <div class="post-content">
-    <p>Here is where I will be storing notes for the year. Will they be organized nicely? Only time will tell.</p>
+    <h1 id="unit-3-notes">Unit 3 Notes</h1>
+<p>(I’ve basically copy pasted these from the lessons for ease of access)</p>
+<h1 id="unit-31-and-32">Unit 3.1 and 3.2</h1>
+<h2 id="variables-and-assignments-notes">Variables and Assignments Notes</h2>
 
-<p>Compsci Notes:</p>
+<p>I did my best. Ya’ll were speedrunning I am NOT a speedrunner.</p>
+
+<h2 id="python">Python:</h2>
+<p>Variables - Name/define; other functions can be done after naming
+= - Will set something equal to something else, usually a word and number or list, etc
+Functions can be performed when names are applied (it tells the function to apply to things with the same name)
+Floats - Decimals that can be used to do math/whatever a function asks for
+Dictionaries assign keys and values</p>
+
+<h2 id="javascript">Javascript:</h2>
+<p>‘var xyz’ is a variable assignment (ie; variables can be assigned using var)
+Booleen is true/false
+Strings are words, such as ‘let’ 
+Lists - const (name) =</p>
+
+<h1 id="data-abstraction">Data Abstraction:</h1>
 <ul>
-  <li>Add prefixes to make an order</li>
-  <li>Dashes -&gt; don’t take them out they mess up the syntax and etc</li>
-  <li>Key + value -&gt; gets response</li>
-  <li>If ‘root’ pops up, just uninstall/reinstall</li>
-  <li>Adding images:
-    <ul>
-      <li>Drag/drop file into ‘_images’ folder</li>
-      <li>Copy paste image file name into code</li>
-      <li>Pray it works</li>
-      <li>If not, good luck</li>
-    </ul>
+  <li>For APs, indexes start at 1 rather than 0</li>
+</ul>
+
+<h2 id="python-1">Python:</h2>
+<ul>
+  <li>Lists look like: name = [“word”, “word”]</li>
+  <li>Lists are often used to store data</li>
+  <li>Lists can also be used to make more lists by using the format: list = [“Strawberry - Fruit”, “Brocolli - Vegetable”]
+And add: fruit = [] and vegetable = []
+Code such as ‘for fruit in list’ can be used to specify what the program is supposed to do with the items under this category in the list</li>
+  <li>Split [split()] function can be used to split a string into a list</li>
+  <li>Join [join()] method takes all items in an iterable and joins them into one string; a string must be specified as a seperator</li>
+</ul>
+
+<h2 id="javascript-1">Javascript:</h2>
+<ul>
+  <li>this.(name) can be used to specify different types of data, (name) can be used to make a category for the data to go in</li>
+  <li>data can be displayed using var (variable name) = [ new (variable name)(“Name”, “Date”, “Age”), etc etc.];</li>
+  <li>A function can be used afterwards to store the data, using:
+       function (function name)(name, (variable name))
+       name.setRole(“Name”);
+       this.name = name;
+       this.variable name = [Name];
+           Etc., etc.</li>
+</ul>
+
+<hr />
+<h1 id="unit-33-and-34-notes">Unit 3.3 and 3.4 Notes</h1>
+<h2 id="vocab-fill-in-the-blanks">Vocab: fill in the blanks</h2>
+
+<p>The symbol for exponent is ^<br />
+The symbol for addition is +<br />
+The symbol for subtraction is -<br />
+The symbol for multiplication is *<br />
+The symbol for division is /<br />
+The symbol for modulus is %<br />
+An algorithm is a sequence of steps that accomplishes a specific task</p>
+
+<p>Index is a number representing a position, like a character’s position in a string or a string’s position in a list.<br />
+Concatenation is when two strings are combined with each other.<br />
+Length is the amount of items in a string.
+A substring is a part of a string.</p>
+
+<ul>
+  <li>Length - the number of characters/item in a string</li>
+  <li>Addition, subtraction, and division are all represented by their respective symbols</li>
+  <li>The only differences are multiplication and exponents (* and ^)</li>
+  <li>Concatenation (which I cannot spell) is essentially adding 2 strings together</li>
+  <li>Substrings are parts of strings</li>
+  <li>The length of a string is the amount of items or numbers in it</li>
+  <li>‘Str’ can be used to initialize something for printing</li>
+  <li>
+    <h2 id="len-tells-the-code-to-consider-the-entirety-of-the-strings-length">‘len’ tells the code to consider the entirety of the string’s length</h2>
+    <h2 id="unit-35-36-and-37-notes">Unit 3.5, 3.6, and 3.7 Notes</h2>
   </li>
+  <li>Boolean - 2 options (ex: true/false, yes/no, 0/1)</li>
+  <li>Relational Operator - Operators that can work between any two values of the same type</li>
+  <li>Logical Operator - Operators that work on operands to produce a single boolean result (such as and or not)</li>
+  <li>
+    <p>Relational operators go first, then logical</p>
+  </li>
+  <li>All programs have conditionals</li>
+  <li>Conditionals drive selection; they dictate what happens in a program based on whether something is true or false</li>
+  <li>Usually lots of if/else statements</li>
+  <li>Algorithm - A set of instructions that accomplish a task</li>
+  <li>Selection - The process that determines which parts of an algoritm is being executed based on a condition that is true or false</li>
+  <li>If/else statements change based on what has occured before</li>
+  <li>Nested Conditionals are like conditionals within conditionals</li>
+  <li>
+    <h2 id="ex-if-condtion-1-is-met-condition-2-will-occur-and-if-condition-2-occurs-condition-3-can-occur">(Ex: If condtion 1 is met, condition 2 will occur, and if condition 2 occurs, condition 3 can occur)</h2>
+    <h2 id="unit-38-and-310-notes">Unit 3.8 and 3.10 Notes</h2>
+    <p>|   Pseudocode Operation  | Python Syntax |                                                           Description                                                          |
+|:———————–:|—————|:——————————————————————————————————————————:|
+|       aList[i]       |       aList[i]        | <em>Accesses the element of aList at index i</em>                                                                                     |
+|       x ← aList[i]      |        x = aList(i)       | <em>Assigns the element of aList at index i <br />to a variable ‘x’</em>                                                                |
+|       aList[i] ← x	     |      aList(i) = x         | <em>Assigns the value of a variable ‘x’ to <br />the element of a List at index i</em>                                                  |
+|   aList[i] ← aList[j]   |       aList[i] = aList[j]        | <em>Assigns value of aList[j] to aList[i]</em>                                                                                        |
+| INSERT(aList, i, value) |       aList.insert(i, value)        | _value is placed at index i in aList. Any <br />element at an index greater than i will shift<br />one position to the right. _    |
+|   APPEND(aList, value)  |      aList.append(value)         |       value is added as an element to the end of aList <br /> and length of aList is increased by 1         |
+|     REMOVE(aList, i)	    |      aList.pop(i)<br />OR<br />aList.remove(value)         | _Removes item at index i and any values at <br />indices greater than i shift to the left. <br />Length of aList decreased by 1. _ |</p>
+  </li>
+  <li>For Loops - Loops that apply a certain algorithm or function to an entire list of similar things; iterates until told not to/until conditions are met (infinite)</li>
+  <li>Recursive Loops - Loops that run through the code until reaching a specific break point</li>
+  <li>While Loops - run until the end of the list (sometimes not in some cases)</li>
+</ul>
+
+<hr />
+<h2 id="unit-39-and-311-notes">Unit 3.9 and 3.11 Notes</h2>
+
+<p>Binary search:</p>
+<ul>
+  <li>One of the two searches that can be used</li>
+  <li>Can only be used with sorted arrays</li>
+  <li>Can be used in a while loop or recursive function</li>
+  <li>Uses a min/max value, halves it, and tests to see if the selected half value matches a requirement; if it doesn’t, it takes either a higher or lower value (whichever is closer) to retest</li>
+</ul>
+
+<p>Sequential search:</p>
+<ul>
+  <li>Usually slower than a Binary Search, as it goes through every element in a list</li>
+  <li>Can be used in a while loop or recursive function</li>
+  <li>
+    <h2 id="should-not-be-used-for-long-calculations-unless-you-want-to-explode-your-computer">Should not be used for long calculations unless you want to explode your computer</h2>
+    <h2 id="unit-312-and-313-notes">Unit 3.12 and 3.13 Notes</h2>
+  </li>
+</ul>
+
+<p>Procedure: A named group of programming instructions that may have parameters and return values; can also be referred as method or function, depending on the language.</p>
+
+<p>Parameters: Input values of a procedure</p>
+
+<p>Arguments: Specify the values of the parameters when a procedure is called</p>
+
+<p>Modularity: Separating a program’s functions into independent blocks that work together to allow a program to function</p>
+
+<p>Procedural Abstraction: The name for a process that allows a procedure to be used while only knowing what it does, and not how the program executes the procedure</p>
+
+<p>What are some other names for procedures?: Processes, operations, modules</p>
+
+<p>Why are procedures effective?: Procedures are effective because they allow for code to be more organized while still retaining functionality</p>
+
+<h2 id="additional-notes">Additional Notes:</h2>
+
+<ul>
+  <li>Procedures interrupt a series of statements and makes the program execute the procedure instead</li>
+  <li>The original code will be run after the procedure is executed</li>
+  <li>Procedures may or may not return values (such as numbers or booleans)</li>
+  <li>Procedures need names to be called (Ex: ‘convertDecimalToBinary’ for a decimal to binary converter)</li>
+  <li>
+    <h2 id="procedures-allow-for-additional-cells-outside-of-code-to-be-changed-without-having-to-change-the-code-itself">Procedures allow for additional cells outside of code to be changed without having to change the code itself</h2>
+    <h2 id="unit-314-and-315-notes">Unit 3.14 and 3.15 Notes</h2>
+  </li>
+</ul>
+
+<p>Packages allow a python user to import methods from a library, and use the methods in their code. Most libraries come with documentation on the different methods they entail and how to use them, and they can be found with a quick Google search. Methods are used with the following:</p>
+
+<p>Some libraries are always installed, such as those with the list methods which we have previously discussed. But others require a special python keyword called import. We will learn different ways to import in Challenge 1.</p>
+
+<p>Sometimes we only need to import a single method from the package. We can do that with the word ‘from’, followed by the package name, then the word ‘import’, then the method. This will alllow you to use the method without mentioning the package’s name, unlike what we did before, however other methods from that package cannot be used. To get the best of both worlds you can use ‘*’.</p>
+
+<p>To import a method as an easier name, just do what we did first, add the word ‘as’, and write the name you would like to use that package as.</p>
+
+<ul>
+  <li>Random values - Randomly generated numbers created using a large set of numbers and a mathematical algorithm</li>
+  <li>Random values are good for randomizing outputs, which can make sure that there are not as many similar outputs</li>
+  <li>Random values can also be used for anything including probability, which includes gacha, dice rolls, and more</li>
+  <li>Really not sure what other notes I can add here</li>
+  <li>
+    <h2 id="remember-to-import-random-before-trying-to-use-a-randomizer">Remember to import random before trying to use a randomizer</h2>
+    <h2 id="unit-316-notes">Unit 3.16 Notes</h2>
+  </li>
+  <li>Simulations are used to simplify/modify certain variables</li>
+  <li>Simulations can contain bias</li>
+  <li>They can be used to simulate things as tests (ie, launching a bomb) when these actions are too dangerous/impractical to do in the real world</li>
+  <li>Simulations can also be used to create situations that are too difficult to recreate in the real world (specific weather conditions for example)</li>
+  <li>Random modules define series of objects that can be generated randomly</li>
+  <li>Randomization helps simulations, as they can help predict many varying probablilities of a simulation</li>
+  <li>Abstractions use conditionals to execute one part of the code only when a particular condition is met, repeat looping, simplification, and it does not request input from the user or display output to the user</li>
+  <li>It is far cheaper to create a simulation than to do said actions in real life</li>
 </ul>
 
   </div>
