@@ -165,3 +165,5 @@ To import a method as an easier name, just do what we did first, add the word 'a
 - Randomization helps simulations, as they can help predict many varying probablilities of a simulation
 - Abstractions use conditionals to execute one part of the code only when a particular condition is met, repeat looping, simplification, and it does not request input from the user or display output to the user
 - It is far cheaper to create a simulation than to do said actions in real life
+-------------------------------------------------------------------------------------------------------------------------------
+Taught Unit 3.17 and 3.18, no notes for these units.
